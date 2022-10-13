@@ -1,0 +1,17 @@
+name: rest_api_event
+description: Easy api-event
+version: 1.0.0
+homepage: https://github.com/BobojonM/rest_api_event
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  rxdart: ^0.27.5
+  connectivity_plus: ^1.0.6
+
+flutter:
