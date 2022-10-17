@@ -10,7 +10,7 @@ class Event<T> {
 
   Stream<T> get stream => subject.stream;
 
-  T get value => subject.value;
+  T get value => subject.valueOrNull;
 
   StreamSubscription<T> listen(void callback(T event)) =>
       stream.listen(callback);

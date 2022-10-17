@@ -17,8 +17,8 @@ class ApiEvent<T> extends Event<ApiResponse<T>> {
   ApiEvent({@required this.service, @required this.httpMethod, this.parser})
       : assert(service != null && service.isNotEmpty && httpMethod != null);
 
-  bool get isCompleted => this.value.status == Status.COMPLETED;
-  bool get isError => this.value.status == Status.ERROR;
+  bool get isCompleted => this.value != null ? this.value.status == Status.COMPLETED : Status.LOADING == Status.ERROR;
+  bool get isError => this.value != null ? this.value.status == Status.ERROR : Status.LOADING == Status.ERROR;
 
   @override
   void publish(ApiResponse<dynamic> event) {
